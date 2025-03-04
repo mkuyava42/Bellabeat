@@ -2,8 +2,9 @@
 title: "Bellabeat"
 author: "Marisa Kuyava"
 output:
-  word_document: default
+  pdf_document: default
   html_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -345,7 +346,7 @@ correlation_calories
 -   There is a strong positive correlation between Total Steps, Distance, Active Minutes and Calories burned; as expected.
 -   Total Distance and Total Steps both have a positive correlation with Calories burned; distance having a slightly stronger correlation
 
-```{r Correlations Charts Calories & Steps vs Distance  , echo=FALSE, message=FALSE, warning=FALSE}
+```{r Correlations Charts Calories & Steps vs Distance, echo=FALSE, message=FALSE, warning=FALSE}
 
 calorie_distance_plot <- ggplot(data=daily_all_merged, aes(x=TotalDistance, y=Calories, colour=TotalDistance))+
 geom_point() + geom_smooth() +
